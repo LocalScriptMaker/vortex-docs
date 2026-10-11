@@ -2,6 +2,9 @@
 title: Tasks
 description: Schedule work with Vortex task helpers.
 ---
+> [!Summary]
+> Tasks provide timing helpers for scheduling work, delaying logic, and running asynchronous operations.
+> In Vortex, `task.spawn`, `task.defer`, `task.delay`, and `task.wait` let you control when code runs.
 
 ## Available helpers
 

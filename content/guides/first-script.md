@@ -2,6 +2,8 @@
 title: Your First Script
 description: Learn how to make your first script in Vortex Studio.
 ---
+> [!Summary]
+> I trust you can do this on your own
 
 <!-- 
 Your first script

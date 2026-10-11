@@ -1,8 +1,11 @@
 ---
-
 title: Scripts and VMs
 description: Learn how scripts execute Luau code and interact with the Vortex engine at runtime.
-------------------------------------------------------------------------------------------------
+---
+
+> [!Summary]
+> Scripts hold Luau source code that the engine executes through the Luau virtual machine.
+> The VM compiles script code into bytecode, runs it at runtime, and lets it interact with the game through engine APIs.
 
 ### Scripts
 

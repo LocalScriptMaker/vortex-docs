@@ -2,6 +2,9 @@
 title: Values
 description: Store simple script-visible values in Vortex.
 ---
+> [!Summary]
+> Values are simple script-visible containers used to store small pieces of state like counters or labels.
+> In Vortex, `IntValue` and `StringValue` are supported, while `BoolValue` is not currently constructible.
 
 ## Available containers
 

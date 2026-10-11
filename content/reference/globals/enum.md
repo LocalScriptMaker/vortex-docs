@@ -3,12 +3,9 @@ title: Enum
 description: The runtime enum namespace.
 ---
 
-## Summary
-
-The enum namespace and the complete member inventory below were revalidated in
-Vortex Studio 0.3.4 in both Script and LocalScript. All 119 listed items were
-available, stable across repeated reads, and converted to their documented
-`Enum.<group>.<item>` string form.
+> [!Summary]
+> `Enum` provides named groups of constants, such as `Enum.KeyCode` and `Enum.Material`.
+> In Vortex Studio 0.3.4, all 119 documented enum items were verified in both Script and LocalScript and convert to their `Enum.<group>.<item>` string form.
 
 ### EasingDirection
 

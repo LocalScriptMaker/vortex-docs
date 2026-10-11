@@ -1,16 +1,28 @@
+
+
 # Vortex documentation
+
+[![Documentation](https://img.shields.io/badge/Docs-create.playvortex.io-blue?style=for-the-badge)](https://create.playvortex.io/) [![GitHub stars](https://img.shields.io/github/stars/breadworkz/vortex-docs?color=yellow&style=for-the-badge)](https://github.com/breadworkz/vortex-docs/stargazers) [![Contributors](https://img.shields.io/github/contributors/breadworkz/vortex-docs?color=brightgreen&style=for-the-badge)](https://github.com/breadworkz/vortex-docs/graphs/contributors) [![GitHub issues](https://img.shields.io/github/issues/breadworkz/vortex-docs?color=orange&style=for-the-badge)](https://github.com/breadworkz/vortex-docs/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/breadworkz/vortex-docs?color=blueviolet&style=for-the-badge)](https://github.com/breadworkz/vortex-docs/pulls)
+
 The documentation for Vortex. (https://create.playvortex.io/)
 
 ## Documentation
 ```text
 vortex-docs
-├── content   # Documentation
-│   ├── guides   # Guides and explanations for using Vortex Studio
-│   └── reference   # API/reference documentation
-│       ├── classes   # Instance classes
-│       ├── datatypes   # Datatypes
-│       ├── globals    # Pre-defined globals
-└────────────────────
+├── .github
+│   ├── ISSUE_TEMPLATE
+│   └── workflows
+├── content
+│   ├── guides
+│   │   └── studio
+│   └── reference
+│       ├── classes
+│       ├── datatypes
+│       ├── globals
+│       └── instance
+└── images
+    ├── examples
+    └── icons
 ```
 
 ## Documentation Status

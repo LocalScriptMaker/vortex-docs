@@ -2,6 +2,9 @@
 title: Client and Server
 description: Explains the client and server
 ---
+> [!Summary]
+> Vortex games run on a client-server model where the server owns the authoritative game state.
+> The client handles local input, visuals, and UI, while the server validates and applies world changes.
 
 Vortex games operate with a client-server model.
 - Server: The server is the authoritative side that runs the actual game and is the source of the game's state.

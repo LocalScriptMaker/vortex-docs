@@ -2,6 +2,9 @@
 title: Introduction
 description: Introduction to Vortex Studio and scripting.
 ---
+> [!Summary]
+> Vortex Studio is a game development environment for creating and scripting interactive experiences.
+> This guide introduces the editor, the runtime model, and the scripting concepts you will use to build gameplay.
 
 <!-- 
 Intro

@@ -2,6 +2,9 @@
 title: Sandbox Limits
 description: Runtime boundaries verified in Vortex Studio.
 ---
+> [!Summary]
+> Sandbox limits define which globals and system APIs are unavailable inside Vortex scripts.
+> These restrictions help keep scripts safe and predictable while you build gameplay logic.
 
 ## No dynamic code or filesystem access
 

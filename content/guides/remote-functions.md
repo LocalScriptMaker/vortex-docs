@@ -2,6 +2,9 @@
 title: Remote Functions
 description: Current RemoteFunction support and limitations in Vortex.
 ---
+> [!Summary]
+> RemoteFunctions let a client request information or a result from the server.
+> Use them for request-response flows, but note that Instance arguments and some runtime behaviors are still limited in Vortex.
 
 ## Current support
 

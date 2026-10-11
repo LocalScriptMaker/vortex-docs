@@ -3,6 +3,10 @@ title: Runtime standard libraries
 description: Standard-library functions verified in Vortex.
 ---
 
+> [!Summary]
+> This page documents standard-library functions verified in Vortex Studio 0.3.4.
+> It lists tested `coroutine`, `math`, `string`, and `table` functions, along with observed behavior and unavailable library features.
+
 ## Verified runtime compatibility
 
 The following standard-library functions were called by the deterministic

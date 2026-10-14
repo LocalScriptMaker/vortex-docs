@@ -4,6 +4,9 @@ description: Attributes are basically custom properties that can be given to an 
 
 Note: Variant = Any type.
 ---
+> [!Summary]
+> Attributes let you store custom metadata on an Instance using name-value pairs.
+> Use `SetAttribute` to create or update values, `GetAttribute` to read one value, and `GetAttributes` to inspect all stored attributes on the object.
 
 ### Methods
 ___________________

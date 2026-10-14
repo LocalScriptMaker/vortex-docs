@@ -2,6 +2,9 @@
 title: Properties
 description: Read and write instance properties safely in Vortex.
 ---
+> [!Summary]
+> Properties are values stored on an Instance, and you read or write them with dot syntax.
+> Some properties are always available, while others may be optional or restricted by runtime rules.
 
 ## Reading and writing
 

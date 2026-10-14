@@ -2,6 +2,9 @@
 title: Bindable Events
 description: Current BindableEvent support in Vortex Studio.
 ---
+> [!Summary]
+> BindableEvents let scripts signal local notifications and state changes within the same runtime.
+> In Vortex, they are available for scripting, but their fire behavior is limited and should not be used for authoritative game communication.
 
 `BindableEvent` can be created and exposes an `Event` table in both Scripts and LocalScripts.
 However, the method required to emit an event,

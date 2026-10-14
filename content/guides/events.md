@@ -2,6 +2,9 @@
 title: Events
 description: Connect to and handle runtime signals in Vortex.
 ---
+> [!Summary]
+> Signals let you respond to runtime events by connecting callbacks to a `Signal`.
+> Use `:Connect` to listen for updates, `:Once` or `:Wait` for one-time handling, and disconnect listeners when they are no longer needed.
 
 ## Signals
 

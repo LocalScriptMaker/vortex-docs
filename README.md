@@ -2,7 +2,7 @@
 
 # Vortex documentation
 
-[![Documentation](https://img.shields.io/badge/Docs-create.playvortex.io-blue?style=for-the-badge)](https://create.playvortex.io/) [![GitHub stars](https://img.shields.io/github/stars/Vortex-Interactive-LLC/Creator-Documentation?color=yellow&style=for-the-badge)](https://github.com/Vortex-Interactive-LLC/Creator-Documentation/stargazers)
+[![Documentation](https://img.shields.io/badge/Docs-create.playvortex.io-blue?style=for-the-badge)](https://create.playvortex.io/) ![GitHub stars](https://img.shields.io/github/stars/Vortex-Interactive-LLC/Creator-Documentation?color=yellow&style=for-the-badge)
 [![Contributors](https://img.shields.io/github/contributors/Vortex-Interactive-LLC/Creator-Documentation?color=brightgreen&style=for-the-badge)](https://github.com/Vortex-Interactive-LLC/Creator-Documentation/graphs/contributors)
 [![GitHub issues](https://img.shields.io/github/issues/Vortex-Interactive-LLC/Creator-Documentation?color=orange&style=for-the-badge)](https://github.com/Vortex-Interactive-LLC/Creator-Documentation/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/Vortex-Interactive-LLC/Creator-Documentation?color=blueviolet&style=for-the-badge)](https://github.com/Vortex-Interactive-LLC/Creator-Documentation/pulls)

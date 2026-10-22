@@ -9,6 +9,7 @@ Revision 2
 
 Written by Kindtracker on August 29th, 2026
 Edited by MtcLuna05 on August 30th, 2026
+Edited by LocalScriptMaker on October 22th, 2026
 -->
 
 > [!NOTE]
@@ -34,15 +35,7 @@ Methods of `game`.
 <br><br>
 
 * [GetService(serviceName: `string`)](#getservice): `Instance`
-
-</details>
-
-<details>
-<summary><b>Callbacks</b></summary>
-Callbacks of `game`.
-<br><br>
-
-* [OnClose](#onclose): `Function` | `nil`
+* [BindToClose(function: `function`)](#bindtoclose): `Instance`
 
 </details>
 
@@ -99,13 +92,27 @@ Services of `game`.
 
 <br/>
 
-## Callbacks
+### BindToClose()
 
-### OnClose
-
-> `Function` | `nil`
+> `Instance`
 >
-> An optional callback that can be assigned before the game closes.
+> `game:BindToClose(function: function)`
+>
+> Binds a function to be called before the game closes.
+
+#### Parameters
+
+- `function`: `function` — a function called before the the game closes.
+
+#### Code Sample
+
+```
+local function onBindToClose()
+    print('shutdowned')
+end
+
+game:BindToClose(onBindToClose)
+```
 
 <br/>
 
@@ -139,7 +146,7 @@ Services of `game`.
 
 > `Instance`
 >
-> Stub. [StarterPlayerScripts](../classes/starter-player-scripts.md)
+> Container inside the StarterPlayer service that stores client-side scripts. [StarterPlayerScripts](../classes/starter-player-scripts.md)
 
 <br/>
 
@@ -147,7 +154,7 @@ Services of `game`.
 
 > `Instance`
 >
-> ServerScriptService contains [Scripts](../classes/script.md) that run when the server starts. [ServerScriptService](../classes/server-script-service.md)
+> Contains [Scripts](../classes/script.md) that run when the server starts. [ServerScriptService](../classes/server-script-service.md)
 
 <br/>
 
@@ -166,5 +173,6 @@ These observations are from Vortex Studio 0.3.4 and may differ in later
 releases.
 
 `game.Workspace` and `game:GetService("Workspace")` both report `ClassName`
-and `Name` as `Workspace`. `game.OnClose` starts as `nil`; assigning a
-function succeeds, but callback delivery has not been established.
+and `Name` as `Workspace`.
+
+The `CloseReason` enum does not yet exist in the `BindToClose` method.

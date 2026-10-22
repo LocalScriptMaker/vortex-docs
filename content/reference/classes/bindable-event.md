@@ -3,18 +3,69 @@ title: BindableEvent
 description: A partially exposed local-event instance.
 ---
 
-## Runtime support
+<!--
+Debris
+Revision 1
 
-`BindableEvent` is constructable in Vortex Studio 0.3.4 in both `Script` and
-`LocalScript`. It exposes an `Event` table.
+Edited by LocalScriptMaker October 22th, 2026
+-->
 
-However, the instance has no `Fire` method, so scripts cannot trigger that
-signal. Its practical use as an in-process event bus is therefore unavailable
-in the current runtime.
+## Summary
+
+<details>
+<summary><b>Methods</b></summary>
+Methods of `BindableEvent`.
+<br><br>
+
+* [AddItem](#additem)
+* [SetMaxItems](#setmaxitems)
+
+</details>
+
+## Overview
+
+`Debris` is a service that allows removal of instances without yielding for objects that may lose utility after a set period of time.
 
 ```lua
-local event = Instance.new("BindableEvent")
-print(event.Event) -- signal table
-print(event.Fire)  -- nil
-event:Destroy()
+local Debris = game:GetService("Debris")
+
+local part = Instance.new("Part")
+part.Parent = workspace
+
+Debris:AddItem(part, 5)
 ```
+
+## Methods
+
+### AddItem
+
+> `Debris:AddItem(instance: Instance, lifetime: Number)`
+>
+> Schedules `instance` for removal after `lifetime` seconds without yielding.
+
+#### Parameters
+
+- `instance`: `Instance` — the instance to remove.
+- `lifetime`: `Number` — the delay before removal, in seconds.
+
+<br/>
+
+### SetMaxItems
+
+> `Debris:SetMaxItems(maxItems: Number)`
+>
+> Sets the service's maximum tracked-item count.
+
+#### Parameters
+
+- `maxItems`: `Number` — the maximum number of tracked items.
+
+## Testing Notes
+
+The exposed method surface was revalidated in Vortex Studio 0.3.4; detailed
+method behavior may differ in later releases.
+
+`AddItem` and `SetMaxItems` are exposed in both `Script` and `LocalScript`.
+Calling `Debris:AddItem(part, 0)` removed an unparented temporary `Part` within
+two scheduler ticks. The held Lua reference then reported `ClassName` as
+`Instance` and an empty `Name`.

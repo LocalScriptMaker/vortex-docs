@@ -13,13 +13,30 @@ Output panel. It returns `nil`.
 print("position", true, 42, Vector3.new(1, 2, 3))
 ```
 
+## warn
+
+Behaves like print, but outputs [warn] before the message for the
+Output panel. The argument should preferably be a `string`, `number`, or `boolean`. Returns `nil`
+
+```lua
+warn('test', false, 3)
+```
+
+## error
+
+Behaves like print, but outputs standart script error before for the
+Output panel and stops the script. The argument should preferably be a `string` or a `number` separately. Returns `nil`
+
+```lua
+error('test')
+```
+
 Output is labelled with the executing script type while the game is running.
 Use your own prefixes when several scripts emit related diagnostics.
 
 ## Warnings and caught errors
 
-`warn` is unavailable. `error` and `assert` are available; when called inside
-`pcall`, they return `false` and an error string containing the generated
+`assert` are available; when called inside `pcall`, they return `false` and an error string containing the generated
 script identifier, line number, and message.
 
 ```lua

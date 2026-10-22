@@ -67,7 +67,7 @@ Signals of `RunService`.
 >
 > `RunService.Heartbeat`
 >
-> Fires once per runtime update with the elapsed time since the previous update.
+> Fires once per runtime update with the elapsed time since the previous update, right after the frame’s physics are finished.
 
 #### Parameters
 
@@ -83,4 +83,6 @@ releases.
 contexts.
 
 `Heartbeat` supports `Connect`, `Once`, and `Wait`. Its observed `deltaTime`
-varied between updates, so it should not be treated as a fixed interval.
+varied between updates, so it should not be treated as a fixed interval. This event works in both contexts.
+
+The `Stepped` and `RenderStepped` events exist, but they are equivalent to `Heartbeat` though the latter can only be triggered only in local scripts.

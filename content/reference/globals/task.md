@@ -19,7 +19,7 @@ Runtime task scheduling helpers.
 
 ## Functions
 
-### defer()
+### defer
 
 ```luau
 task.defer(callback: Function, ...: any)
@@ -33,7 +33,7 @@ calling thread. Extra arguments are passed to `callback`.
 - `callback`: `Function` — the function to schedule.
 - `...`: `any` — optional arguments passed to `callback`.
 
-### delay()
+### delay
 
 ```luau
 task.delay(duration: Number, callback: Function, ...: any)
@@ -48,7 +48,7 @@ to `callback`.
 - `callback`: `Function` — the function to schedule.
 - `...`: `any` — optional arguments passed to `callback`.
 
-### spawn()
+### spawn
 
 ```luau
 task.spawn(callback: Function, ...: any)
@@ -62,7 +62,7 @@ thread. Extra arguments are passed to `callback`.
 - `callback`: `Function` — the function to schedule.
 - `...`: `any` — optional arguments passed to `callback`.
 
-### wait()
+### wait
 
 ```luau
 task.wait(duration: Number?): Number
@@ -75,6 +75,18 @@ elapsed time.
 #### Parameters
 
 - `duration`: `Number?` — an optional duration to wait, in seconds.
+
+### cancel
+
+```luau
+task.cancel(thread: coroutine)
+```
+
+Cancels a thread and closes it, preventing it from being resumed manually or by the engine's scheduler. Returns nothing
+
+#### Parameters
+
+- `thread`: `coroutine` — the thread to cancel
 
 ## Verified runtime compatibility
 
@@ -89,7 +101,7 @@ probe records the scheduling details below.
 These observations are from Vortex Studio 0.3.4 and may differ in later
 releases.
 
-`task.cancel`, `task.desynchronize`, and `task.synchronize` are not exposed.
+`task.desynchronize`, and `task.synchronize` are not exposed.
 `task.spawn` completes during the scheduling call itself. `task.defer` and
 `task.delay(0, callback)` are still pending after one `task.wait()` and
 complete during the second wait cycle. `task.wait()` returns a number.

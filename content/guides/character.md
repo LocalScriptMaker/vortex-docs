@@ -22,4 +22,8 @@ local player = game:GetService('Players'):GetPlayers()[1]
 local character = player and player.Character or player and player.CharacterAdded:Wait()
 ```
 
+# Properties
+
+
+
 Supported properties, methods and signals see in the [`Model`](../reference/classes/model.md) reference

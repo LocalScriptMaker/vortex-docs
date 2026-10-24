@@ -22,8 +22,14 @@ local player = game:GetService('Players'):GetPlayers()[1]
 local character = player and player.Character or player and player.CharacterAdded:Wait()
 ```
 
-# Properties
+## Properties
 
+### Velocity
 
+> `Velocity(velocity: Vector3)`
+>
+> Describes how its `Character.Position` is presently changing. The unit of this property is studs per second
 
-Supported properties, methods and signals see in the [`Model`](../reference/classes/model.md) reference
+***
+
+Other supported properties, methods and signals see in the [`Model`](../reference/classes/model.md) reference

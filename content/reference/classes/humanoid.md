@@ -122,19 +122,19 @@ local humanoid:Humanoid = character:WaitForChild('Humanoid')
 
 ### IsDead
 
-> `Humanoid:IsDead(): boolean`
+> `IsDead(): boolean`
 >
 > Returns whether the `Humanoid` is dead.
 
 ### GetState
 
-> `humanoid:GetState(): Enum.HumanoidStateType`
+> `GetState(): Enum.HumanoidStateType`
 >
 > Returns the Humanoid's current state.
 
 ### TakeDamage
 
-> `Humanoid:TakeDamage(amount: number)`
+> `TakeDamage(amount: number)`
 >
 > Lowers the `Health` property by the given amount if it is not protected by a `ForceField`. Returns nothing.
 
@@ -146,25 +146,26 @@ local humanoid:Humanoid = character:WaitForChild('Humanoid')
 
 ### Died
 
-> `Died: Connection`
+> `Died()`
 >
 > Fires when when `Health` property reaches 0. Returns nothing.
 
 ### HealthChanged
 
-> [`Signal`](../datatypes/signal.md)
+> `HealthChanged(health: number)`
 >
-> `humanoid.HealthChanged`
->
-> Signals when the Humanoid health changes.
+> Signals when the `Health` property changes. Returns new health amount.
 
 ### StateChanged
 
-> [`Signal`](../datatypes/signal.md)
+> `StateChanged(old: Enum.HumanoidStateType, new: Enum.HumanoidStateType)`
 >
-> `humanoid.StateChanged`
->
-> Signals when the Humanoid state changes.
+> Signals when the `Humanoid` state changes. Returns `Humanoid` states.
+
+#### Parameters
+
+- `old`: `Enum.HumanoidStateType` — The `Humanoid` previous state type.
+- `new`: `Enum.HumanoidStateType` — The `Humanoid` current state type.
 
 ### Jumping
 

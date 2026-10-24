@@ -3,102 +3,140 @@ title: Humanoid
 description: Represents the humanoid controller in a Player Character.
 ---
 
-The current player's humanoid is available as
-`game:GetService("Players").LocalPlayer.Character.Humanoid` in a `LocalScript`.
-In Vortex Studio 0.3.4, a server `Script` can also reach a visible player's
-character through `game:GetService("Players"):GetPlayers()[1].Character`.
-The character's root transform is exposed separately as a
-[`HumanoidRootPart`](./humanoid-root-part.md).
-
 ## Summary
 
 <details>
 <summary><b>Properties</b></summary>
-Properties of a `Humanoid`.
+Properties of `Humanoid`.
 <br><br>
 
-* [ClassName](#classname): `string`
-* [Name](#name): `string`
-* [Health](#health): `Number`
-* [MaxHealth](#maxhealth): `Number`
+* [Health](#health): `number`
+* [MaxHealth](#maxhealth): `number`
 
 </details>
 
 <details>
 <summary><b>Methods</b></summary>
-Methods of a `Humanoid`.
+Signals of `Humanoid`.
 <br><br>
 
-* [IsDead](#isdead): `Boolean`
-* [GetState] (#getstate): `Enum.HumanoidStateType`
+* [IsDead](#isdead): `boolean`
+* [GetState](#getstate): `Enum.HumanoidStateType`
 
 </details>
 
 <details>
 <summary><b>Signals</b></summary>
-Signals of a `Humanoid`.
+Signals of `Humanoid`.
 <br><br>
 
-* [Died](#died): [`Signal`](../datatypes/signal.md)
-* [HealthChanged](#healthchanged): [`Signal`](../datatypes/signal.md)
-* [StateChanged](#statechanged): [`Signal`](../datatypes/signal.md)
-* [Jumping](#jumping): [`Signal`](../datatypes/signal.md)
-* [FreeFalling](#freefalling): [`Signal`](../datatypes/signal.md)
-* [Running](#running): [`Signal`](../datatypes/signal.md)
+* [Changed: `Connection`](#changed)
 
 </details>
 
+## Overview
+
+`Humanoid` provides character functionality.
+
+The current player's humanoid is available in both contexts; `Script` and `LocalScript`.
+
+```luau
+-- Script
+
+local player = game:GetService('Players'):GetPlayers()[1]
+local character = player and player.Character or player.CharacterAdded:Wait()
+local humanoid:Humanoid = character:WaitForChild('Humanoid')
+```
+
+```luau
+-- LocalScript
+
+local player = game:GetService('Players').LocalPlayer
+local character = player and player.Character or player.CharacterAdded:Wait()
+local humanoid:Humanoid = character:WaitForChild('Humanoid')
+```
+
 ## Properties
-
-### ClassName
-
-> `string`
->
-> The Humanoid class name, `"Humanoid"`.
-
-<br/>
-
-### Name
-
-> `string`
->
-> The Humanoid name.
-
-<br/>
 
 ### Health
 
-> `Number`
+> `Humanoid.Health: number`
 >
-> The current health value.
-
-<br/>
+> The current health value. If the `Humanoid` is dead, this property is continually set to 0.
 
 ### MaxHealth
 
-> `Number`
+> `Humanoid.MaxHealth: number`
 >
 > The maximum health value.
 
-<br/>
+### WalkSpeed
+
+> `Humanoid.WalkSpeed: number`
+>
+> Determines how quickly the `Humanoid` is able to walk, in studs per second.
+
+### JumpPower
+
+> `Humanoid.JumpPower: number`
+>
+> Determines how much upwards force is applied to the `Humanoid` when jumping.
+
+### JumpHeight
+
+> `Humanoid.JumpPower: number`
+>
+> Determines how much studs `Humanoid` can jump.
+
+### AutoRotate
+
+> `Humanoid.AutoRotate: boolean`
+>
+> Determines whether or not the `Humanoid` will automatically rotate to face in the direction they are moving.
+
+### HipHeight
+
+> `Humanoid.HipHeight: number`
+>
+> Determines the distance in studs off the ground the `HumanoidRootPart` should be.
+
+### MoveDirection
+
+> `Humanoid.MoveDirection: Vector3`
+>
+> Normalized Vector3 that describes the direction a `Humanoid` is walking in.
+
+### Sit
+
+> `Humanoid.Sit: boolean`
+>
+> Describes whether the `Humanoid` is currently sitting.
+
+### SeatPart
+
+> `Humanoid.SeatPart: BasePart`
+>
+> A part that a `Humanoid` is currently sitting in.
 
 ## Methods
 
 ### IsDead
 
-> `Boolean`
+> `Humanoid:IsDead(): boolean`
 >
-> `humanoid:IsDead()`
->
-> Returns whether the Humanoid is dead.
+> Returns whether the `Humanoid` is dead.
 
 ### GetState
 
-> `Enum.HumanoidStateType``
->
-> `humanoid:GetState()`
+> `humanoid:GetState(): Enum.HumanoidStateType`
 >
 > Returns the Humanoid's current state.
+
+### TakeDamage
+
+> `Humanoid:TakeDamage()`
+>
+> Lowers the `Health` property by the given amount if it is not protected by a `ForceField`
 
 ## Signals
 

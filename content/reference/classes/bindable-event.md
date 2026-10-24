@@ -7,7 +7,6 @@ description: A partially exposed local-event instance.
 Debris
 Revision 1
 
-Edited by LocalScriptMaker October 22th, 2026
 -->
 
 ## Summary
@@ -17,55 +16,48 @@ Edited by LocalScriptMaker October 22th, 2026
 Methods of `BindableEvent`.
 <br><br>
 
-* [AddItem](#additem)
-* [SetMaxItems](#setmaxitems)
+* [Fire](#fire)
+
+</details>
+
+<details>
+<summary><b>Signals</b></summary>
+Methods of `BindableEvent`.
+<br><br>
+
+* [Event](#event)
 
 </details>
 
 ## Overview
 
-`Debris` is a service that allows removal of instances without yielding for objects that may lose utility after a set period of time.
-
-```lua
-local Debris = game:GetService("Debris")
-
-local part = Instance.new("Part")
-part.Parent = workspace
-
-Debris:AddItem(part, 5)
-```
+`BindableEvent` is an instance that enables an event within scripts at the same context level; server **or** client.
 
 ## Methods
 
-### AddItem
+### Fire
 
-> `Debris:AddItem(instance: Instance, lifetime: Number)`
+> `Fire(arguments: Tuple)`
 >
-> Schedules `instance` for removal after `lifetime` seconds without yielding.
+> Fires `BindableEvent` that enables its signal. Returns nothing
 
 #### Parameters
 
-- `instance`: `Instance` — the instance to remove.
-- `lifetime`: `Number` — the delay before removal, in seconds.
+- `arguments`: `Tuple` — a tuple consisting of variables of any class.
 
-<br/>
+## Signals
 
-### SetMaxItems
-
-> `Debris:SetMaxItems(maxItems: Number)`
+> `Event(arguments: Tuple): Connection`
 >
-> Sets the service's maximum tracked-item count.
+> The signal fires when any script calls [Fire](#Fire) method for this `BindableEvent`. Returns `Connection`.
 
 #### Parameters
 
-- `maxItems`: `Number` — the maximum number of tracked items.
+- `arguments`: `Tuple` — the parameters sent through [Fire](#Fire)
 
 ## Testing Notes
 
-The exposed method surface was revalidated in Vortex Studio 0.3.4; detailed
+The exposed method surface was revalidated in Vortex Studio 0.8.1; detailed
 method behavior may differ in later releases.
 
-`AddItem` and `SetMaxItems` are exposed in both `Script` and `LocalScript`.
-Calling `Debris:AddItem(part, 0)` removed an unparented temporary `Part` within
-two scheduler ticks. The held Lua reference then reported `ClassName` as
-`Instance` and an empty `Name`.
+ClassName of `Connection` is `RBXScriptSignal`

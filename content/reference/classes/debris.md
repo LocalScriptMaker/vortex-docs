@@ -54,7 +54,7 @@ Debris:AddItem(part, 5)
 
 > `Debris:SetMaxItems(maxItems: Number)`
 >
-> Sets the service's maximum tracked-item count.
+> Sets the service's maximum tracked-item count. Amount can't be bigger than 1000.
 
 #### Parameters
 

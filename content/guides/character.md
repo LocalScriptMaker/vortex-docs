@@ -22,6 +22,16 @@ local player = game:GetService('Players'):GetPlayers()[1]
 local character = player and player.Character or player and player.CharacterAdded:Wait()
 ```
 
+<details>
+<summary><b>Properties</b></summary>
+Properties of `Character`.
+<br><br>
+
+* [Velocity: `Vector3`](#velocity)
+* [AngularVelocity: `Vector3`](#angularvelocity)
+
+</details>
+
 ## Properties
 
 ### Velocity

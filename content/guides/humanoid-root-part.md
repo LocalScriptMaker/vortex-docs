@@ -35,21 +35,19 @@ The tested ordinary Part fields are unavailable: `Anchored`, `CanCollide`,
 `Transparency`, and the tested velocity, mass, collision-query, touch, and
 root-priority fields all read as `nil`.
 
-The tested Instance, Part, and physics methods—including hierarchy, clone,
+The tested Instance, Part, and physics methods including hierarchy, clone,
 destroy, attributes, property signals, joints, impulses, mass, and network
-ownership methods—also read as `nil`. `Changed`, `Touched`, `TouchEnded`, and
+ownership methods also read as `nil`. `Changed`, `Touched`, `TouchEnded`, and
 the tested hierarchy/lifecycle signals read as `nil`; none is connectable.
 
 ## Character-state authority
 
-Writing `HumanoidRootPart.Size`, or
-`HumanoidRootPart.Orientation` is rejected in both a `LocalScript` and a
+Writing `HumanoidRootPart.Size`, or `HumanoidRootPart.Orientation` is rejected in both a `LocalScript` and a
 confirmed server `Script`. The current error calls the property read-only in a
 LocalScript and says character state is server-authoritative, even when
 `RunService:IsServer()` reports `true`.
 
-Consequently, do not use the visible character root part as a server-side
-teleport, resize, or movement-control target in the current runtime. This is a
+Consequently, do not use the visible character root part as a, resize, or movement-control target in the current runtime. This is a
 restriction of the live Character projection; it does not describe ordinary
 script-created Parts, whose tested transform properties remain writable.
 

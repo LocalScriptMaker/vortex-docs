@@ -37,7 +37,7 @@ Signals of `BoolValue`.
 
 ### Value
 
-> `Value(value: boolean)`
+> `BoolValue.Value(value: boolean)`
 >
 > boolean value
 

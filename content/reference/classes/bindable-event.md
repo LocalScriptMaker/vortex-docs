@@ -25,7 +25,7 @@ Methods of `BindableEvent`.
 Methods of `BindableEvent`.
 <br><br>
 
-* [Event](#event)
+* [Event: `Connection`](#event)
 
 </details>
 
@@ -46,6 +46,8 @@ Methods of `BindableEvent`.
 - `arguments`: `Tuple` — a tuple consisting of variables of any class.
 
 ## Signals
+
+### Event
 
 > `Event(arguments: Tuple): Connection`
 >

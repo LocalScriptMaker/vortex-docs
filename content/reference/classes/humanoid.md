@@ -134,15 +134,19 @@ local humanoid:Humanoid = character:WaitForChild('Humanoid')
 
 ### TakeDamage
 
-> `Humanoid:TakeDamage()`
+> `Humanoid:TakeDamage(amount: number)`
 >
-> Lowers the `Health` property by the given amount if it is not protected by a `ForceField`
+> Lowers the `Health` property by the given amount if it is not protected by a `ForceField`. Returns nothing.
+
+#### Parameters
+
+- `amount`: `number` — damage amount
 
 ## Signals
 
 ### Died
 
-> [`Signal`](../datatypes/signal.md)
+> `Humanoid.Died: Connection`
 >
 > `humanoid.Died`
 >

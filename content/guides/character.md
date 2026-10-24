@@ -6,7 +6,7 @@ description: The runtime Model projection associated with a Player.
 # Summary
 
 A Character is the live [`Model`](../reference/classes/model.md) exposed by a player's
-[`Player.Character`](./player.md) field. It is not a separately constructible
+`Player.Character` field. It is not a separately constructible
 Vortex class. Obtain it from the local player in a LocalScript or from a Player
 returned by `Players:GetPlayers()` in a server Script.
 

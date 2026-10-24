@@ -10,32 +10,30 @@ returned by `Players:GetPlayers()` in a server Script.
 
 ```luau
 -- LocalScript
-local character = game:GetService("Players").LocalPlayer.Character
+local player = game:GetService('Players').LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
 ```
 
 ```luau
 -- Script
-local player = game:GetService("Players"):GetPlayers()[1]
-local character = player and player.Character
+local player = game:GetService('Players'):GetPlayers()[1]
+local character = player and player.Character or player and player.CharacterAdded:Wait()
 ```
 
 ## Confirmed public projection
 
-In Vortex Studio 0.3.4, the live Character reports `ClassName == "Model"`.
-The observed public fields are `ClassName`, `Name`, `Position`,
-[`Humanoid`](./humanoid.md), and
-[`HumanoidRootPart`](./humanoid-root-part.md). `Parent` reads as `nil`.
+In Vortex Studio 0.8.1, the live Character reports `ClassName == "Model"`.
+The observed public field is `Parent` reads as `nil`.
 
 The tested generic Instance methods are available, including `GetChildren`,
 `GetDescendants`, `FindFirstChild`, `FindFirstChildOfClass`, `WaitForChild`,
 `IsA`, and the attribute/property-signal methods. The Character's tested
 hierarchy and lifecycle signals are unavailable; its `Changed` signal is
-connectable. Model pivot and primary-part APIs are unavailable.
+connectable.
 
 `Character:FindFirstChild("Humanoid")` and
 `Character:FindFirstChild("HumanoidRootPart")` resolve the same direct values
-as the public fields. The tested standard R6/R15 limb names are absent from
-this public projection.
+as the public fields.
 
 ## Write-only visual rotation
 

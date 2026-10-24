@@ -1,6 +1,6 @@
 ---
 title: BoolValue
-description: A partially exposed local-event instance.
+description: A detached boolean value container.
 ---
 
 <!--
@@ -12,50 +12,46 @@ Revision 1
 ## Summary
 
 <details>
-<summary><b>Methods</b></summary>
-Methods of `BindableEvent`.
+<summary><b>Properties</b></summary>
+Properties of `BoolValue`.
 <br><br>
 
-* [Fire](#fire)
+* [Value](#value)
 
 </details>
 
 <details>
 <summary><b>Signals</b></summary>
-Signals of `BindableEvent`.
+Signals of `BoolValue`.
 <br><br>
 
-* [Event: `Connection`](#event)
+* [Changed: `Connection`](#changed)
 
 </details>
 
 ## Overview
 
-`BindableEvent` is an instance that enables an event within scripts at the same context level; server **or** client.
+`BoolValue` is an instance that contains and modifies a boolean value.
 
-## Methods
+## Properties
 
-### Fire
+### Value
 
-> `Fire(arguments: Tuple)`
+> `Value(value: boolean)`
 >
-> Fires `BindableEvent` that enables its signal. Returns nothing
-
-#### Parameters
-
-- `arguments`: `Tuple` — a tuple consisting of variables of any class.
+> boolean value
 
 ## Signals
 
-### Event
+### Changed
 
-> `Event(arguments: Tuple): Connection`
+> `Changed(value: boolean): Connection`
 >
-> The signal fires when any script calls [Fire](#Fire) method for this `BindableEvent`. Returns `Connection`.
+> Fires whenever the `Value` property of `BoolValue` changes.
 
 #### Parameters
 
-- `arguments`: `Tuple` — the parameters sent through [Fire](#Fire)
+- `value`: `boolean` — new `Value` property of `BoolValue`
 
 ## Testing Notes
 

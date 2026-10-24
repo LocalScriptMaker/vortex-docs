@@ -31,15 +31,15 @@ Signals of `BoolValue`.
 
 ## Overview
 
-`BoolValue` is an instance that contains and modifies a boolean value.
+`BoolValue` is an instance that contains and modifies a `boolean` value.
 
 ## Properties
 
 ### Value
 
-> `BoolValue.Value(value: boolean)`
+> `BoolValue.Value: boolean`
 >
-> boolean value
+> `boolean` value
 
 ## Signals
 
@@ -51,7 +51,7 @@ Signals of `BoolValue`.
 
 #### Parameters
 
-- `value`: `boolean` — new `Value` property of `BoolValue`
+- `value: boolean` — new `Value` property of `BoolValue`
 
 ## Testing Notes
 

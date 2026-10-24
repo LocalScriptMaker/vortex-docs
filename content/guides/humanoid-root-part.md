@@ -5,7 +5,7 @@ description: The root Part of a visible Player Character.
 
 `HumanoidRootPart` is the root object exposed by a visible player's Character
 Model. It reports `ClassName == "Part"`, but it is a narrow character-state
-projection rather than a normal [`Part`](./part.md) instance. It is not a
+projection rather than a normal [`Part`](../reference/classes/part.md) instance. It is not a
 separately constructible Vortex class; access it from the character that
 Vortex exposes:
 
@@ -42,7 +42,7 @@ the tested hierarchy/lifecycle signals read as `nil`; none is connectable.
 
 ## Character-state authority
 
-Writing `HumanoidRootPart.Position`, `HumanoidRootPart.Size`, or
+Writing `HumanoidRootPart.Size`, or
 `HumanoidRootPart.Orientation` is rejected in both a `LocalScript` and a
 confirmed server `Script`. The current error calls the property read-only in a
 LocalScript and says character state is server-authoritative, even when
@@ -55,5 +55,5 @@ script-created Parts, whose tested transform properties remain writable.
 
 ## Testing Notes
 
-These observations were verified in Vortex Studio 0.3.4; untested members may
+These observations were verified in Vortex Studio 0.8.1; untested members may
 still exist in a later runtime release.

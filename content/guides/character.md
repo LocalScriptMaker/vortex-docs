@@ -30,6 +30,12 @@ local character = player and player.Character or player and player.CharacterAdde
 >
 > Describes how its `Character.Position` is presently changing. The unit of this property is studs per second
 
+### AngularVelocity
+
+> `AngularVelocity(angularVelocity: Vector3)`
+>
+> Describes how its `Character.Orientation` is presently changing. The unit of this property is studs per second
+
 ***
 
 Other supported properties, methods and signals see in the [`Model`](../reference/classes/model.md) reference

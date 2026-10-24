@@ -22,7 +22,7 @@ Methods of `BindableEvent`.
 
 <details>
 <summary><b>Signals</b></summary>
-Methods of `BindableEvent`.
+Signals of `BindableEvent`.
 <br><br>
 
 * [Event: `Connection`](#event)

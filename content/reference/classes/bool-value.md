@@ -16,7 +16,7 @@ Revision 1
 Properties of `BoolValue`.
 <br><br>
 
-* [Value](#value)
+* [Value: boolean](#value)
 
 </details>
 

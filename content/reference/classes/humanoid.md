@@ -146,13 +146,9 @@ local humanoid:Humanoid = character:WaitForChild('Humanoid')
 
 ### Died
 
-> `Humanoid.Died: Connection`
+> `Died: Connection`
 >
-> `humanoid.Died`
->
-> Signals that the Humanoid died.
-
-<br/>
+> Fires when when `Health` property reaches 0. Returns nothing.
 
 ### HealthChanged
 
